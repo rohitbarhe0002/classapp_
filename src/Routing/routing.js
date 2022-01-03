@@ -4,27 +4,18 @@ import Login from '../components/Login';
 
 import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
 import PrivateRoute from '../PrivateRoute';
+import PublicRoute from '../PublicRoute';
 
 export default class Routing extends Component {
-    constructor (props){
-        super(props);
-        this.state={
-                show:true,
-        }
-    }
+   
     render() {
        
         return (
-
-
             <div>
                 <Router>
-
-                 
-
-                <Route path ="/Login" component={Login}/>
-                {/* <PrivateRoute path = "/Users" component={Users}/> */}
-               <Route path="/Users" component={Users}/>
+                <Route exact path = "/users" component={Users}/>
+                {/* <Route path ="/login" component={Login}/> */}
+                
                 </Router>
             </div>
 

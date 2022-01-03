@@ -6,7 +6,7 @@ const initialState = {
 }
 
 export const users = (state = initialState, action) => {
-  console.log(state);
+  console.log("staete",state);
   switch (action.type) {
     case SET_USERS:
       return {
